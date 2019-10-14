@@ -14,9 +14,12 @@ public class Katasegundo {
             } else {
                 histogram.put(data[i], 1);
             }
+        for (int key : data) {
+            histogram.put(key, histogram.containsKey(key) ? histogram.get(key) +1 : 1);
         }
         for(Map.Entry<Integer, Integer> entry : histogram.entrySet()) {
             System.out.println(entry.getKey()+ "==>" + entry.getValue());
+        }
         }
     }
 }
